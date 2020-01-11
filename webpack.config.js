@@ -6,7 +6,7 @@ const config = {
     mode: 'development',
     context: path.join(__dirname, 'src'),
 
-    entry: './index.js',
+    entry: './Index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './bundle.js'
