@@ -7,7 +7,11 @@
     "prebuild": "./node_modules/.bin/webpack",
     "clean": "./node_modules/.bin/eslint",
     "build": "./node_modules/.bin/webpack-dev-server",
-    "precommit": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [ "yarn clean",
