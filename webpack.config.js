@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const postcssPresetEnv = require('postcss-preset-env')
 
 require('dotenv').config()
 
@@ -17,8 +18,16 @@ const config = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: '/node_modules/',
+                include: [
+                    path.resolve(__dirname, 'src'),
+                    path.resolve(__dirname, 'Index.js')  
+                ],
                 use: 'babel-loader'
+            },
+            {
+                test: /\.css/,
+                use: [
+                    'style-loader']
             },
             {
                 test:/\.(png|jpe?g|gif)$/,

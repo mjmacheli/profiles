@@ -11,7 +11,8 @@ class App extends Component {
 
         this.state = {
             profiles: [],
-            current: null
+            current: null,
+            
         }
     }
 
