@@ -5,7 +5,13 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "./node_modules/.bin/webpack",
-    "build": "./node_modules/.bin/webpack-dev-server"
+    "clean": "./node_modules/.bin/eslint",
+    "build": "./node_modules/.bin/webpack-dev-server",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [ "yarn clean",
+        "git add"]
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
@@ -22,6 +28,8 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.0.6",
+    "lint-staged": "^10.0.0-beta.15",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "style-loader": "^1.1.2",
