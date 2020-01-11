@@ -2,6 +2,8 @@ const webpack = require('webpack')
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 
+require('dotenv').config()
+
 const config = {
     mode: 'development',
     context: path.join(__dirname, 'src'),
