@@ -1,3 +1,3 @@
-import path from 'path'
+import funcs from './funcs'
 
-const log = (string) => console.log(string)
+funcs('whats up')
